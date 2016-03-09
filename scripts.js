@@ -38,6 +38,6 @@ function multiply() {
 function divide() {
     getNums();
     davidsLib.divide(num1, num2, function(err, result) {
-        callback(err, result, num1, num2);
+        callback(err, result);
     });
 }
