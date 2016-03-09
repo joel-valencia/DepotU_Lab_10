@@ -6,34 +6,32 @@ function getNums() {
     num2 = document.getElementById('num2').value;
 }
 
-function callback(err, result, num1, num2) {
-    davidsLib.add(num1, num2, function(err, result) {
+function callback(err, result) {
         if (err) {
             alert("Error!");
         } else {
             alert("Result: " + result);
         }
-    })
 }
 
 function add() {
     getNums();
     davidsLib.add(num1, num2, function(err, result) {
-        callback(err, result, num1, num2);
+        callback(err, result);
     });
 }
 
 function subtract() {
     getNums();
     davidsLib.subtract(num1, num2, function(err, result) {
-        callback(err, result, num1, num2);
+        callback(err, result);
     });
 }
 
 function multiply() {
     getNums();
     davidsLib.multiply(num1, num2, function(err, result) {
-        callback(err, result, num1, num2);
+        callback(err, result);
     });
 }
 
